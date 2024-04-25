@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/forum
-    username: <your-username-here>
-    password: <your-password-here>
+    url: jdbc:postgresql://cd5vlri6nnqe17.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d92pgdm04s1k2s
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
   jpa:
     properties:
       hibernate:
@@ -15,13 +15,14 @@ spring:
     type: redis
   data:
     redis:
-      host: localhost
-      port: 6379
+      host: redis-17848.c281.us-east-1-2.ec2.redns.redis-cloud.com
+      port: 17848
+      password: ${REDISCLOUD_PASSWORD}
   mail:
     host: sandbox.smtp.mailtrap.io
     port: 2525
-    username: <your-username-here>
-    password: <your-password-here>
+    username: ${MAILTRAP_USERNAME}
+    password: ${MAILTRAP_PASSWORD}
     properties:
       mail:
         transport:
@@ -32,4 +33,4 @@ spring:
           starttls:
             enable: true
 jwt:
-  secret: forum
+  secret: ${API_SECRET}
