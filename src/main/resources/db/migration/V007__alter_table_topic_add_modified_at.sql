@@ -1,0 +1,1 @@
+alter table topic add column modified_at timestamp without time zone;

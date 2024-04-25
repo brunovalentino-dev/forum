@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/forum
+    username: <your-username-here>
+    password: <your-password-here>
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  output:
+    ansi:
+      enabled: always
+  cache:
+    type: redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: <your-username-here>
+    password: <your-password-here>
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        debug: true
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+jwt:
+  secret: forum
