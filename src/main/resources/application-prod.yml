@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://cd5vlri6nnqe17.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d92pgdm04s1k2s
+    url: jdbc:postgresql://cd5vlri6nnqe17.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/db8vj3ckaa3t59
     username: ${DATABASE_USERNAME}
     password: ${DATABASE_PASSWORD}
   jpa:
@@ -15,8 +15,8 @@ spring:
     type: redis
   data:
     redis:
-      host: redis-17848.c281.us-east-1-2.ec2.redns.redis-cloud.com
-      port: 17848
+      host: redis-15398.c73.us-east-1-2.ec2.redns.redis-cloud.com
+      port: 15398
       password: ${REDISCLOUD_PASSWORD}
   mail:
     host: sandbox.smtp.mailtrap.io
